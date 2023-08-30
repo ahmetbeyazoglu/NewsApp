@@ -44,7 +44,7 @@ fun OnBoardingPage(
         Text(
             text = page.description,
             modifier = Modifier.padding(horizontal = MediumPadding2),
-            style = MaterialTheme.typography.h3,
+            style = MaterialTheme.typography.h6,
             color = colorResource(id = com.herpestes.newsapp.R.color.text_medium)
         )
 

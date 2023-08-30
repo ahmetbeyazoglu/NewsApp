@@ -1,10 +1,7 @@
 package com.herpestes.newsapp.presentation.common
 
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Button
-import androidx.compose.material.ButtonDefaults
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -25,7 +22,23 @@ fun NewsButton(
     ) {
         Text(
             text = text,
-            style = MaterialTheme.typography.h3.copy(fontWeight = FontWeight.SemiBold),
+            style = MaterialTheme.typography.h6.copy(fontWeight = FontWeight.SemiBold),
         )
     }
+}
+
+
+@Composable
+fun NewsTextButton(
+    text: String,
+    onClick: () -> Unit
+){
+    TextButton(onClick = onClick) {
+        Text(
+            text = text,
+            style = MaterialTheme.typography.h6.copy(fontWeight = FontWeight.SemiBold),
+            color = Color.White
+        )
+    }
+
 }
