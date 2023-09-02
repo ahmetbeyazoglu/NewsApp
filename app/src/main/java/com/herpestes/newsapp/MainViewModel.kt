@@ -1,11 +1,10 @@
 package com.herpestes.newsapp
 
-import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.herpestes.newsapp.domain.usercases.AppEntryUseCases
+import com.herpestes.newsapp.domain.usercases.app_entry.AppEntryUseCases
 import com.herpestes.newsapp.presentation.nvgraph.Route
 
 

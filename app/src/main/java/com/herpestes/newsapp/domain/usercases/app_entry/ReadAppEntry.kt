@@ -1,4 +1,4 @@
-package com.herpestes.newsapp.domain.usercases
+package com.herpestes.newsapp.domain.usercases.app_entry
 
 import com.herpestes.newsapp.domain.manager.LocalUserManager
 import kotlinx.coroutines.flow.Flow
