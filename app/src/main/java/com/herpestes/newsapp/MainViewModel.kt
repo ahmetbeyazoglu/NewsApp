@@ -1,5 +1,6 @@
 package com.herpestes.newsapp
 
+
 import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -12,7 +13,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
-
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
