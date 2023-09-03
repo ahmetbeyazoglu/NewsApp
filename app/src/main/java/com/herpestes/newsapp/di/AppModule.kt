@@ -12,6 +12,7 @@ import com.herpestes.newsapp.domain.usercases.app_entry.ReadAppEntry
 import com.herpestes.newsapp.domain.usercases.app_entry.SaveAppEntry
 import com.herpestes.newsapp.domain.usercases.news.GetNews
 import com.herpestes.newsapp.domain.usercases.news.NewsUseCases
+import com.herpestes.newsapp.domain.usercases.news.SearchNews
 import com.herpestes.newsapp.util.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -63,7 +64,8 @@ object AppModule {
         newsRepository: NewsRepository
     ): NewsUseCases{
         return NewsUseCases(
-            getNews = GetNews(newsRepository)
+            getNews = GetNews(newsRepository),
+            searchNews = SearchNews(newsRepository)
         )
     }
 
