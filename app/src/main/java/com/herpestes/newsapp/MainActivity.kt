@@ -26,6 +26,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.herpestes.newsapp.data.local.NewsDao
+import com.herpestes.newsapp.domain.model.Article
+import com.herpestes.newsapp.domain.model.Source
 import com.herpestes.newsapp.presentation.nvgraph.NavGraph
 import com.herpestes.newsapp.presentation.onboarding.OnBoardingScreen
 import com.herpestes.newsapp.ui.theme.NewsAppTheme
@@ -37,11 +40,12 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val viewModel by viewModels<MainViewModel>()
-
+    val viewModel by viewModels<MainViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
+
+
         installSplashScreen().apply {
             setKeepOnScreenCondition(condition = { viewModel.splashCondition.value })
         }
